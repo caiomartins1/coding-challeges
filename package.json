@@ -1,0 +1,21 @@
+{
+  "name": "coding-challeges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiomartins1/coding-challeges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiomartins1/coding-challeges/issues"
+  },
+  "homepage": "https://github.com/caiomartins1/coding-challeges#readme"
+}
