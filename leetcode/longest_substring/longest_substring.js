@@ -5,21 +5,20 @@
  */
 const lengthOfLongestSubstring = (s) => {
   let longestSubstringLength = 0;
-  let counter = 0;
-  let visitedCharacters = {};
+  const newString = [];
 
-  s.split('').forEach((char) => {
-    if (!(char in visitedCharacters)) {
-      visitedCharacters[char] = char;
-      counter++;
-    } else {
-      visitedCharacters = {};
-      if (counter > longestSubstringLength) {
-        longestSubstringLength = counter;
-      }
-      counter = 0;
+  for (let i = 0; i < s.length; i++) {
+    const indexOfCurrentChar = newString.indexOf(s[i]);
+
+    if (indexOfCurrentChar !== -1) {
+      newString.splice(0, indexOfCurrentChar + 1);
     }
-  });
+    newString.push(s[i]);
+
+    longestSubstringLength = Math.max(longestSubstringLength, newString.length);
+  }
 
   return longestSubstringLength;
 };
+
+console.log(lengthOfLongestSubstring('dvdf'));
